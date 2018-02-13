@@ -85,17 +85,17 @@ var alkiStore = {
     }
 };
 
-printUpdate = (name) => {
+saleUpdate = (name) => {
     name.cookiePerHour();
     document.write('<h1>' + name.name + '</h1>');
     for (i = 0; i < workHours.length; i++){
-        document.write(workHours[i] + ' ' + name.totalPerHour[i] + '<br/>');
+        document.write('<li>' + workHours[i] + ' ' + name.totalPerHour[i] + '</li>');   
     }
 };
 
-printUpdate(pikeStore);
-printUpdate(airportStore);
-printUpdate(centerStore);
-printUpdate(capitolStore);
-printUpdate(alkiStore);
+saleUpdate(pikeStore);
+saleUpdate(airportStore);
+saleUpdate(centerStore);
+saleUpdate(capitolStore);
+saleUpdate(alkiStore);
 
