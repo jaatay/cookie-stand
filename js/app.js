@@ -11,7 +11,7 @@ var pikeStore = {
     },
     cookiePerHour: function() {
         for (i = 0; i < workHours.length; i++) {
-            var newHour = (this.randomCust() * this.averageCookie);
+            var newHour = Math.ceil((this.randomCust() * this.averageCookie));
             this.totalPerHour.push(newHour);
         }
     }
@@ -28,7 +28,7 @@ var airportStore = {
     },
     cookiePerHour: function() {
         for (i = 0; i < workHours.length; i++) {
-            var newHour = (this.randomCust() * this.averageCookie);
+            var newHour = Math.ceil((this.randomCust() * this.averageCookie));
             this.totalPerHour.push(newHour);
         }
     }
@@ -45,7 +45,7 @@ var centerStore = {
     },
     cookiePerHour: function() {
         for (i = 0; i < workHours.length; i++) {
-            var newHour = (this.randomCust() * this.averageCookie);
+            var newHour = Math.ceil((this.randomCust() * this.averageCookie));
             this.totalPerHour.push(newHour);
         }
     }
@@ -62,7 +62,7 @@ var capitolStore = {
     },
     cookiePerHour: function() {
         for (i = 0; i < workHours.length; i++) {
-            var newHour = (this.randomCust() * this.averageCookie);
+            var newHour = Math.ceil((this.randomCust() * this.averageCookie));
             this.totalPerHour.push(newHour);
         }
     }
@@ -79,7 +79,7 @@ var alkiStore = {
     },
     cookiePerHour: function() {
         for (i = 0; i < workHours.length; i++) {
-            var newHour = (this.randomCust() * this.averageCookie);
+            var newHour = Math.ceil((this.randomCust() * this.averageCookie));
             this.totalPerHour.push(newHour);
         }
     }
