@@ -1,3 +1,5 @@
+'use strict';
+
 //Globals
 var workHours = ['6am:' , '7am:' , '8am:', '9am:', '10am:' , '11am:', '12am:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
 var allInfo = [];
@@ -20,7 +22,7 @@ function CookieStand(location, minCust, maxCust, averageCookie){
     };
 
     this.totalPerHour = function(){
-        for (i = 0; i < workHours.length; i++){
+        for (var i = 0; i < workHours.length; i++){
             var newHour = Math.ceil((this.randomCust() * this.averageCookie));
             var newCust = Math.ceil((newHour / this.averageCookie));
             this.cookiePerHour.push(newHour);
@@ -44,14 +46,12 @@ CookieStand.prototype.render = function(){
     newTD.className = 'name';
     newTR.appendChild(newTD); 
     
-    for (i = 0; i < workHours.length; i++){
-    newTD = document.createElement('td');
-    newTD.className = 'data';
-    newTD.textContent = this.cookiePerHour[i];
-    newTR.appendChild(newTD);
-
-    }
-    
+    for (var i = 0; i < workHours.length; i++){
+        newTD = document.createElement('td');
+        newTD.className = 'data';
+        newTD.textContent = this.cookiePerHour[i];
+        newTR.appendChild(newTD);
+    }  
 };
 
 //Create data with new instances
@@ -63,7 +63,6 @@ var alkiStore = new CookieStand('Alki' , 2 , 16 , 4.6);//Alki/min 2/max 16/avg 4
 
 //Table head function
 function tableHead() {
-  
     var newTableHead = document.createElement('tr');
     baseTableHead.appendChild(newTableHead);
 
@@ -71,7 +70,7 @@ function tableHead() {
     newTableHeadBlank.textContent = 'Time';
     newTableHead.appendChild(newTableHeadBlank);
 
-    for (i = 0; i < workHours.length; i++){
+    for (var i = 0; i < workHours.length; i++){
         var newTableHeadRow = document.createElement('th');
         newTableHeadRow.textContent = workHours[i];
         newTableHead.appendChild(newTableHeadRow);
@@ -80,7 +79,6 @@ function tableHead() {
 
 //Table foot function
 function tableFoot() {
-  
     var newTableFoot = document.createElement('tr');
     baseTableHead.appendChild(newTableFoot);
 
@@ -89,22 +87,20 @@ function tableFoot() {
     newTableFoot.appendChild(newTableFootBlank);
 
     var totalPerHourLocation = (function() {
-  
         for (var i = 0; i < workHours.length; i++){
             var newSum = 0;
             for (var j = 0; j < allInfo.length; j++) {
                 newSum += allInfo[j].cookiePerHour[i];
             }
+
             sumPerLocation.push(newSum);
         }
     }());
 
-    for (i = 0; i < workHours.length; i++){
-           
+    for (var i = 0; i < workHours.length; i++){
             var newTableFootRow = document.createElement('th');
             newTableFootRow.textContent = sumPerLocation[i];
             newTableFoot.appendChild(newTableFootRow);
-
     }
 };
 
