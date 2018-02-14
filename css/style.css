@@ -1,3 +1,22 @@
+* {
+    border: solid 2px orange;
+}
+
+body {
+    background-color: #7CDBD5;
+}
+
+h1 {
+    font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
+    color: #F53240;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+}
+
+p {
+    font: 400 2em;
+    color: rgb(2, 105, 109)
+}
+
 .total {
     font-weight: bold;
 }
@@ -15,4 +34,13 @@
 
 .name {
     font-weight: bold;
+}
+
+.emphasized {
+    font-style: italic;
+    font: 400 2em 'Pacifico', Helvetica, sans-serif;
+}
+
+#fishHero {
+    float: right;
 }
