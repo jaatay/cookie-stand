@@ -52,6 +52,10 @@ CookieStand.prototype.render = function(){
         newTD.textContent = this.cookiePerHour[i];
         newTR.appendChild(newTD);
     }  
+
+    newTD = document.createElement('td');
+    newTD.textContent = this.totalCookieDay;
+    newTR.appendChild(newTD);
 };
 
 //Create data with new instances
@@ -75,6 +79,10 @@ function tableHead() {
         newTableHeadRow.textContent = workHours[i];
         newTableHead.appendChild(newTableHeadRow);
     }
+
+    newTableHeadRow = document.createElement('td');
+    newTableHeadRow.textContent = 'Total';
+    newTableHead.appendChild(newTableHeadRow);
 };
 
 //Table foot function

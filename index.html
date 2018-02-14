@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,17 +12,33 @@
 
     <body>
 
-        <header>
+        <header id="locationTop">
             <nav>
-                <button>Contact</button>
-                <button>Locations</button>
-                <button>Hours</button>
+                <a href="#locationBottom"><button id="locationTop">Locations</button></a>
+                <a href="#hoursBottom"><button id="hoursTop">Hours</button></a>
+                <button id="contactTop">Contact</button>
             </nav>
         </header>
         
         <h1>PatFished.com</h1>
         <p>Seattle flavor with a little <span class="emphasized">je ne sais quoi</span></p>
         <img src="img/salmonTopHat.png" alt="Picture of salmong wearing a tophat" title="Not your everyday fish" id="fishHero"/>
+        <h2>Our secret...</h2>
+        <p>test this paragraph lorum ipsum blah testing what happens if the length of this paragraph increases in relation to the floated picture</p>
+
+        <section>
+            <h2 id="locationBottom">Store Locations!</h2>
+            <ul>
+                <li>1st and Pike</li>
+                <li>SeaTac Airport</li>
+                <li>Seattle Center</li>
+                <li>Capitol Hill</li>
+                <li>Alki</li>
+            </ul>
+
+            <h2 id="hoursBottom">Store Hours</h2>
+            <p>All store locations open 6:00 am to 8:00 pm daily!</p>
+        </section>>
         
 
      

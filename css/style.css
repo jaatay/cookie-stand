@@ -17,6 +17,15 @@ p {
     color: rgb(2, 105, 109)
 }
 
+button {
+    background-color: #F53240;
+    color:  black;
+}
+
+header {
+    display: inline;
+}
+
 .total {
     font-weight: bold;
 }
@@ -43,4 +52,5 @@ p {
 
 #fishHero {
     float: right;
+    max-width: 80%;
 }
