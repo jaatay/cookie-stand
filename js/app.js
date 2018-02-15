@@ -4,7 +4,11 @@
 var workHours = ['6am:' , '7am:' , '8am:', '9am:', '10am:' , '11am:', '12am:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
 var allInfo = [];
 var sumPerLocation = [];
+var newForm = [];
 var baseTableHead = document.getElementById('infoTable');
+var newStoreForm = document.getElementById('addNewStore');
+var submitButton = document.getElementById('submitButton');
+var testP = document.getElementById('test');
 
 //Constructor
 function CookieStand(location, minCust, maxCust, averageCookie){
@@ -120,3 +124,14 @@ centerStore.render();
 capitolStore.render();
 alkiStore.render();
 tableFoot();
+
+newStoreForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    new CookieStand (newStoreForm.elements[1].value, newStoreForm.elements[2].value, newStoreForm.elements[3].value, newStoreForm.elements[4].value)
+    baseTableHead.innerHTML = '';
+    tableHead();
+    for (var i = 0; i < allInfo.length; i++){
+        allInfo[i].render();
+    }
+    tableFoot();
+});

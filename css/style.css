@@ -26,6 +26,10 @@ header {
     display: inline;
 }
 
+form {
+    display: block;
+}
+
 .total {
     font-weight: bold;
 }
