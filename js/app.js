@@ -37,7 +37,7 @@ CookieStand.prototype.totalPerHour = function(){
         this.totalCookieDay += newHour;
         this.totalCustDay += newCust;
     }
-}
+};
 
 //Render prototype
 CookieStand.prototype.render = function(){
@@ -62,7 +62,7 @@ CookieStand.prototype.render = function(){
 };
 
 //Table head function
-function tableHead() {
+var tableHead = () => {
     var newTableHead = document.createElement('tr');
     baseTableHead.appendChild(newTableHead);
 
@@ -82,7 +82,7 @@ function tableHead() {
 };
 
 //Table foot function
-function tableFoot() {
+var tableFoot = () => {
     var sumPerLocation = [];
     var newTableFoot = document.createElement('tr');
     baseTableHead.appendChild(newTableFoot);
@@ -102,9 +102,9 @@ function tableFoot() {
         newTableFootRow.textContent = sumPerLocation[i];
         newTableFoot.appendChild(newTableFootRow);
     }
-        
 };
 
+//Render all function
 var renderAll = () => {
     baseTableHead.innerHTML = '';
     tableHead();
@@ -114,6 +114,7 @@ var renderAll = () => {
     tableFoot();
 };
 
+//Form event listener
 newStoreForm.addEventListener('submit', (event) => {
     event.preventDefault();
     new CookieStand (newStoreForm.elements[1].value, newStoreForm.elements[2].value, newStoreForm.elements[3].value, newStoreForm.elements[4].value)
@@ -121,10 +122,10 @@ newStoreForm.addEventListener('submit', (event) => {
 });
 
 //Create data with new instances
-var pikeStore = new CookieStand('1st and Pike' , 23 , 65 , 6.3)//1st and Pike /min 23/max 65/ avg 6.3
-var airportStore = new CookieStand('SeaTac Airport' , 3 , 24 , 1.2);//SeaTac Airport/min 3/ max 24/avg 1.2
-var centerStore = new CookieStand('Seattle Center' , 11 , 38 , 3.7);//Seattle Center/min 11/max 38/avg 3.7
-var capitolStore = new CookieStand('Capitol Hill' , 20 , 38 , 2.3);//capitol hill/min 20/max 38/avg 2.3
-var alkiStore = new CookieStand('Alki' , 2 , 16 , 4.6);//Alki/min 2/max 16/avg 4.6
+var pikeStore = new CookieStand('1st and Pike' , 23 , 65 , 6.3)
+var airportStore = new CookieStand('SeaTac Airport' , 3 , 24 , 1.2);
+var centerStore = new CookieStand('Seattle Center' , 11 , 38 , 3.7);
+var capitolStore = new CookieStand('Capitol Hill' , 20 , 38 , 2.3);
+var alkiStore = new CookieStand('Alki' , 2 , 16 , 4.6);
 
 renderAll();
