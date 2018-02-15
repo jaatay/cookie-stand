@@ -107,7 +107,6 @@ function tableFoot() {
 
 var renderAll = () => {
     baseTableHead.innerHTML = '';
-    //totalPerHourLocation();
     tableHead();
     for (var i = 0; i < allInfo.length; i++){
         allInfo[i].render();
