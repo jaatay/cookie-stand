@@ -1,12 +1,13 @@
 'use strict';
 
 //Globals
-var workHours = ['6am:' , '7am:' , '8am:', '9am:', '10am:' , '11am:', '12am:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
+var workHours = ['6am' , '7am' , '8am', '9am', '10am' , '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var allInfo = [];
 var newForm = [];
 var baseTableHead = document.getElementById('infoTable');
 var newStoreForm = document.getElementById('addNewStore');
 var submitButton = document.getElementById('submitButton');
+var resetButton = document.getElementById('resetButton');
 
 //Constructor
 function CookieStand(location, minCust, maxCust, averageCookie){
@@ -57,6 +58,7 @@ CookieStand.prototype.render = function(){
     }  
 
     newTD = document.createElement('td');
+    newTD.className = 'name';
     newTD.textContent = this.totalCookieDay;
     newTR.appendChild(newTD);
 };
@@ -67,16 +69,19 @@ var tableHead = () => {
     baseTableHead.appendChild(newTableHead);
 
     var newTableHeadBlank = document.createElement('td');
+    newTableHeadBlank.className = 'name';
     newTableHeadBlank.textContent = 'Time';
     newTableHead.appendChild(newTableHeadBlank);
 
     for (var i = 0; i < workHours.length; i++){
         var newTableHeadRow = document.createElement('th');
+        newTableHeadRow.className = 'name';
         newTableHeadRow.textContent = workHours[i];
         newTableHead.appendChild(newTableHeadRow);
     }
 
     newTableHeadRow = document.createElement('td');
+    newTableHeadRow.className = 'name';
     newTableHeadRow.textContent = 'Total';
     newTableHead.appendChild(newTableHeadRow);
 };
@@ -89,6 +94,7 @@ var tableFoot = () => {
 
     var newTableFootBlank = document.createElement('td');
     newTableFootBlank.textContent = 'Totals';
+    newTableFootBlank.className = 'name';
     newTableFoot.appendChild(newTableFootBlank);
 
     for (var i = 0; i < workHours.length; i++){
@@ -99,6 +105,7 @@ var tableFoot = () => {
 
         sumPerLocation.push(newSum);
         var newTableFootRow = document.createElement('th');
+        newTableFootRow.className = 'name';
         newTableFootRow.textContent = sumPerLocation[i];
         newTableFoot.appendChild(newTableFootRow);
     }
@@ -114,6 +121,17 @@ var renderAll = () => {
     tableFoot();
 };
 
+//Create data with new instances
+var createStateOne = () => {
+   allInfo = [];
+    var pikeStore = new CookieStand('1st and Pike' , 23 , 65 , 6.3)
+    var airportStore = new CookieStand('SeaTac Airport' , 3 , 24 , 1.2);
+    var centerStore = new CookieStand('Seattle Center' , 11 , 38 , 3.7);
+    var capitolStore = new CookieStand('Capitol Hill' , 20 , 38 , 2.3);
+    var alkiStore = new CookieStand('Alki' , 2 , 16 , 4.6);
+    renderAll();
+};
+
 //Form event listener
 newStoreForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -121,11 +139,10 @@ newStoreForm.addEventListener('submit', (event) => {
     renderAll();
 });
 
-//Create data with new instances
-var pikeStore = new CookieStand('1st and Pike' , 23 , 65 , 6.3)
-var airportStore = new CookieStand('SeaTac Airport' , 3 , 24 , 1.2);
-var centerStore = new CookieStand('Seattle Center' , 11 , 38 , 3.7);
-var capitolStore = new CookieStand('Capitol Hill' , 20 , 38 , 2.3);
-var alkiStore = new CookieStand('Alki' , 2 , 16 , 4.6);
+//Reset event listener
+resetButton.addEventListener('click', () => {
+    createStateOne();
+});
 
-renderAll();
+createStateOne();
+
