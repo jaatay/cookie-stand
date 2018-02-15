@@ -26,7 +26,7 @@ function CookieStand(location, minCust, maxCust, averageCookie){
 
 CookieStand.prototype.randomCust = function(){
     return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
- };
+};
 
 CookieStand.prototype.totalPerHour = function(){
     for (var i = 0; i < workHours.length; i++){
