@@ -1,12 +1,30 @@
 * {
-    /* border: solid 2px orange; */
+    /* border: dashed 2px orange;  */
+    
 }
 
 body {
-    background-color: #7CDBD5;
+    background: linear-gradient(#7CDBD5, white);
+    margin: 0;
+    padding: 0;
+} 
+
+header {
+    background-color: rgb(2, 105, 109);
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
 
 h1 {
+    text-align: center;
     font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
     color: #F53240;
     text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
@@ -17,8 +35,8 @@ h2 {
 }
 
 p {
-    font: 400 2em;
-    color: rgb(2, 105, 109)
+    font: 400 3em;
+    color: rgb(2, 105, 109);
 }
 
 button {
@@ -26,12 +44,14 @@ button {
     color:  black;
 }
 
-header {
-    display: inline;
-}
-
 form {
     display: block;
+}
+
+.navButtons{
+    height: 50px;
+    color: rgb(2, 105, 109);
+    font: 400 2em 'Pacifico', Helvetica, sans-serif;
 }
 
 .total {
@@ -64,8 +84,57 @@ form {
 }
 
 #fishHero {
-    float: right;
+    float:right;
     max-width: 80%;
     opacity: .9;
-    
+    margin-top: 0;
 }
+
+#pictureRow {
+    display: inline-block;
+    background-color: white;
+    height: 100px;
+    width: 100%;
+}
+
+#familyPic{
+    height: 100px;
+    width: 19%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+#chinookPic{
+    height: 100px;
+    width: 19%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+#cookiePic{
+    height: 100px;
+    width: 19%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+#cutterPic{
+    height: 100px;
+    width: 19%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+#fishPic{
+    height: 100px;
+    width: 19%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+
