@@ -129,6 +129,7 @@ var createStateOne = () => {
     var centerStore = new CookieStand('Seattle Center' , 11 , 38 , 3.7);
     var capitolStore = new CookieStand('Capitol Hill' , 20 , 38 , 2.3);
     var alkiStore = new CookieStand('Alki' , 2 , 16 , 4.6);
+   
     renderAll();
 };
 
