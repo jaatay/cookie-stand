@@ -97,6 +97,8 @@ form {
 #pictureRow img{
     width: 16%;
     height: 100px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 footer {
