@@ -1,8 +1,3 @@
-* {
-    /* border: dashed 2px orange;  */
-    
-}
-
 body {
     background: linear-gradient(#7CDBD5, white);
     margin: 0;
@@ -28,6 +23,7 @@ h1 {
     font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
     color: #F53240;
     text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+    margin-bottom: 0;
 }
 
 h2 {
@@ -42,6 +38,7 @@ p {
 button {
     background-color: #F53240;
     color:  black;
+    height: 60px;
 }
 
 form {
@@ -88,53 +85,23 @@ form {
     max-width: 80%;
     opacity: .9;
     margin-top: 0;
+    padding-top: 0;
 }
 
 #pictureRow {
-    display: inline-block;
+    display: inline;
     background-color: white;
+
+}
+
+#pictureRow img{
+    width: 16%;
     height: 100px;
+}
+
+footer {
     width: 100%;
-}
-
-#familyPic{
     height: 100px;
-    width: 19%;
-    margin: 0;
-    border: 0;
-    padding: 0;
+    background-color: rgb(2, 105, 109);
+    
 }
-
-#chinookPic{
-    height: 100px;
-    width: 19%;
-    margin: 0;
-    border: 0;
-    padding: 0;
-}
-
-#cookiePic{
-    height: 100px;
-    width: 19%;
-    margin: 0;
-    border: 0;
-    padding: 0;
-}
-
-#cutterPic{
-    height: 100px;
-    width: 19%;
-    margin: 0;
-    border: 0;
-    padding: 0;
-}
-
-#fishPic{
-    height: 100px;
-    width: 19%;
-    margin: 0;
-    border: 0;
-    padding: 0;
-}
-
-

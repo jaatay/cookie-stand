@@ -1,8 +1,10 @@
+'use strict';
+
 var locationButton = document.getElementById('locationTop');
 var hoursButton = document.getElementById('hoursTop');
 var contactButton = document.getElementById('contactTop');
 
-mouseHover = (event) => {
+var mouseHover = (event) => {
     event.target.style.backgroundColor = 'rgb(2, 105, 109)';
     event.target.style.color = "#F53240";
     setTimeout(function(){
@@ -13,3 +15,8 @@ mouseHover = (event) => {
 };
 
 locationButton.addEventListener('mouseover', mouseHover);
+hoursButton.addEventListener('mouseover' , mouseHover);
+contactButton.addEventListener('mouseover', mouseHover);
+contactButton.addEventListener('click' , () => {
+    alert('Our number is currently disconnected, but will be online again soon!')
+});
